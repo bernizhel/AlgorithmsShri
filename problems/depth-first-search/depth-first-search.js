@@ -10,6 +10,26 @@
  * }
  */
 
-export function dfs(tree) {
+// export function dfs(tree) {
+//   const result = [];
+//   const stack = [tree];
+//   while (stack.length !== 0) {
+//     const current = stack.pop();
+//     result.push(current.val);
+//     if (current.right !== null) {
+//       stack.push(current.right);
+//     }
+//     if (current.left !== null) {
+//       stack.push(current.left);
+//     }
+//   }
+//   return result;
+// }
 
+export function dfs(tree) {
+  if (tree === null) {
+    return [];
+  }
+
+  return [tree.val].concat(dfs(tree.left)).concat(dfs(tree.right));
 }
