@@ -27,9 +27,9 @@
 // }
 
 export function dfs(tree) {
-  if (tree === null) {
-    return [];
-  }
+    if (tree === null) {
+        return [];
+    }
 
-  return [tree.val].concat(dfs(tree.left)).concat(dfs(tree.right));
+    return [tree.val].concat(dfs(tree.left)).concat(dfs(tree.right));
 }
